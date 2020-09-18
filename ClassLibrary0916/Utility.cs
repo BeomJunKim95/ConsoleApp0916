@@ -18,7 +18,7 @@ namespace ClassLibrary0916
 			bool bFlag = false;  
 			while (!bFlag) //숫자가 아닌값을 입력받으면 bflag에 false를 반환 받으니 false를 반환받으면 루프
 			{
-				bFlag = int.TryParse(Console.ReadLine(), out num); 
+				bFlag = int.TryParse(str, out num); 
 			}
 			return num;
 		}
