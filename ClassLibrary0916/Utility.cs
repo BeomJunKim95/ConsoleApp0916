@@ -15,11 +15,13 @@ namespace ClassLibrary0916
 			//제대로된 값만을 받기 위해 루프돌게 코딩
 			//하지만 이렇게 하면 콘솔에서 밖에 쓰지 못함
 			int num = 0;
-			bool bFlag = false;  
-			while (!bFlag) //숫자가 아닌값을 입력받으면 bflag에 false를 반환 받으니 false를 반환받으면 루프
-			{
-				bFlag = int.TryParse(str, out num); 
-			}
+			bool bFlag = false;
+			//while (!bFlag) //숫자가 아닌값을 입력받으면 bflag에 false를 반환 받으니 false를 반환받으면 루프
+			//{
+			bFlag = int.TryParse(str, out num);
+			//}
+			if (bFlag == false)
+				num = 0;
 			return num;
 		}
 
